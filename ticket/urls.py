@@ -36,14 +36,5 @@ urlpatterns = [
     
 
 
-    #url(r"^movies/$", views.Movies_Add, name="create_movie"),
-    #url(r"^mo/([0-9]+)/$", views.ResetHits, name="reset_hits"),
-    #url (r"^booked/", views.booked, name='booked'),
-   # url (r"^book/([0-9]+)/", views.Book_Ticket, name="book_movie"),
-    #url (r"^delete/([0-9]+)/", views.DeleteCustomer, name="delete_customer"),
-    #url(r'^searchurl/?$', views.search, name='search_page'),
-
-
-    
-    
+       
             ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
