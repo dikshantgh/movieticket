@@ -1,0 +1,26 @@
+<a href ="{% url  'main_page' %}">Home</a>
+
+<strong><center> {{object.ticket_no}}</center></strong>
+
+</a> <li><a href = "{% url 'movie_update' object.id %}">
+<button type="button">Update </button></li></a></li>
+
+</a> <li><a href = "{% url 'movie_delete'  object.id %}">
+<button type="button">Delete </button></li></a></li>
+
+
+<center><strong>Tikcet LIMIT :: {{object.ticket_limit}}</strong></center><br>
+
+<strong>{{object.name}}</strong><br>
+
+<strong>{{object.description}}</strong><br>
+
+<iframe width="560" height="315"
+ src="{{object.url}}" frameborder="0" allowfullscreen></iframe>
+<br>
+
+
+<a href = "{% url 'book_ticket'  object.id %}">
+<button type="button">Book Ticket </button></a>
+
+<center>Number of times this movie is viewed :<strong>{{page}}</strong></center>

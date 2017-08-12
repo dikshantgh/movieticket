@@ -1,0 +1,28 @@
+<html>
+<head>
+<Tile>Online Movie Ticket</Tile>
+</head>
+<body>
+<center><h1>LOOK AND BOOK MOVIE</h1></center>
+<a href ="{% url  'genre_create' %}">Create a new Genre</a>
+
+<center><strong>GENRE</strong><br>
+
+<br>
+
+{% for obj in object_list %}
+
+  
+<li><a href = "{% url 'movie_brief' obj.id  %}">{{obj.name}}</a><img src=  height="40" width="40" /></li>
+  <img scr = "{{obj.image}}" />            
+
+
+  
+
+{% endfor %}
+
+</center>
+
+</body>
+
+</html>
