@@ -31,10 +31,11 @@ urlpatterns = [
     url(r"^moviedelete/(?P<pk>\d+)/$", views.MovieDeleteView.as_view(), name="movie_delete"),
     url(r"^genredelete/(?P<pk>\d+)/$", views.GenreDeleteView.as_view(), name="genre_delete"),
     url(r"^bookticket/(?P<pk>\d+)/$", views.BookCreateView.as_view(), name="book_ticket"),
-
-   
-    
+    url(r"^bookedusers/$", views.BookedUsersView.as_view(), name="booked_users"),
 
 
-       
-            ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+]
+if settings.DEBUG is True:
+
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

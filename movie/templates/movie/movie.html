@@ -1,18 +1,20 @@
-<a href ="{% url  'main_page' %}">Home</a>
-<br>
+<center><a href ="{% url  'main_page' %}">Home</a></center>
 
-</a> <li><a href = "{% url 'genre_delete'  object.id %}">
-<button type="button">Delete  This Genre</button></li></a></li>
+
+<a href = "{% url 'genre_delete'  object.id %}">
+<button type="button">Delete  This Genre</button></a><br>
+
+
 
 <strong>{{object}}</strong><br>
 
 {% for obj in queryset %}
 	{% if obj.moviegenre == object %}
-	    <li><a href="{% url 'movie_details' obj.id %}">{{obj.name}} </a> <li><a href = "{% url 'movie_update' obj.id %}">
-<button type="button">Update </button></li></a></li>
+	    <li><a href="{% url 'movie_details' obj.id %}">{{obj.name}} </a> <a href = "{% url 'movie_update' obj.id %}">
+<button type="button">Update </button></a>
 
-</a> <li><a href = "{% url 'movie_delete'  obj.id %}">
-<button type="button">Delete </button></li></a></li>
+</a> <a href = "{% url 'movie_delete'  obj.id %}">
+<button type="button">Delete </button></a></li>
 
 
 

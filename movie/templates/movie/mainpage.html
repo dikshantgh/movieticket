@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
 <Tile>Online Movie Ticket</Tile>
@@ -13,16 +15,21 @@
 {% for obj in object_list %}
 
   
-<li><a href = "{% url 'movie_brief' obj.id  %}">{{obj.name}}</a><img src=  height="40" width="40" /></li>
-  <img scr = "{{obj.image}}" />            
-
-
+<li><a href = "{% url 'movie_brief' obj.id  %}">{{obj.name}}</a>    
+  <img src="{'issuu.jpg'}" height="30" width="30"></img></li><br>       
   
+{{MEDIA_URL}}
+
+
 
 {% endfor %}
+<a href ="{% url  'booked_users' %}"><h2 id ="top"> Show Booked Users</h2></a>
+
+
 
 </center>
 
 </body>
 
 </html>
+

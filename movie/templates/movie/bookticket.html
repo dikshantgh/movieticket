@@ -1,5 +1,6 @@
 
-<a href ="{% url  'main_page' %}">Home</a>
+
+<center><a href ="{% url  'main_page' %}">Home</a></center>
 
 
 <html>
@@ -8,7 +9,10 @@
 {% csrf_token %}
 {% for field in form %}
   <div>
-      
+          {% for hidden in form.hidden_fields %}
+            {{hidden}}---
+
+          {% endfor %}
  
   <label>{{ field.label_tag }}</label>
   </div>
@@ -31,5 +35,5 @@
 
 
 
-{{total_ticket.tickets__sum }}
+
 
